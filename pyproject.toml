@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "token-throughput-jitter-analyzer"
+version = "0.1.0"
+description = "Computes Time-To-First-Token, Inter-Token Latency percentiles, and streaming stall bursts from token timestamps"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+token-throughput-jitter-analyzer = "token_throughput_jitter_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["token_throughput_jitter_analyzer*"]
